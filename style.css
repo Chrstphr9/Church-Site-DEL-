@@ -196,7 +196,7 @@ section:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        display: flex;
+        /* display: flex; */
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -209,6 +209,7 @@ section:hover {
         display: block; /* Show only on mobile */
         position: relative;
         right: 0;
+        font-size: 32px;
     }
       .nav-links {
         display: none;
