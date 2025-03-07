@@ -32,6 +32,7 @@ body {
     font-size: 1.8rem;
     font-weight: bold;
     color: #333;
+    white-space: nowrap;
 }
 
 /* Navbar */
@@ -195,18 +196,19 @@ section:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
     .title {
         font-size: 1.5rem;
+        flex-grow: 1;
     }
     .menu-icon {
         display: block; /* Show only on mobile */
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 1001; /* Ensure it's above other elements */
+        position: relative;
+        right: 0;
     }
       .nav-links {
         display: none;
