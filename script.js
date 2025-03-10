@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector(".menu-icon");
-    const navLinks = document.querySelector(".nav-links");
-    const menuIconElement = menuIcon.querySelector("i"); // Get the icon inside the button
+  const menuIcon = document.querySelector(".menu-icon");
+  const navLinks = document.querySelector(".nav-links");
 
-    menuIcon.addEventListener("click", function () {
+  menuIcon.addEventListener("click", function () {
       navLinks.classList.toggle("show");
-      
+
       // Toggle between hamburger and close icon
       if (navLinks.classList.contains("show")) {
-        menuIconElement.classList.replace("fa-bars", "fa-times"); // Change to "X"
+          menuIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>'; // Show 'X'
       } else {
-        menuIconElement.classList.replace("fa-times", "fa-bars"); // Change back to "☰"
+          menuIcon.innerHTML = '<i class="fa-solid fa-bars"></i>'; // Show hamburger
       }
-    });
   });
+});
