@@ -35,7 +35,7 @@
         .title img {
             height: 50px;
         }
-        .navbar {
+        /* .navbar {
             display: flex;
             align-items: center;
         }
@@ -55,7 +55,7 @@
             color: white;
             font-size: 24px;
             cursor: pointer;
-        }
+        } */
         .contact-form {
             background: white;
             padding: 20px;
@@ -104,16 +104,46 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .nav-links {
-                flex-direction: column;
-                display: none;
-            }
-            .menu-icon {
-                display: block;
-            }
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 32px;
+        position: relative;
+        z-index: 1100;
+    }
+
+    /* Navigation menu - initially hidden */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    /* Show navigation when menu is active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
             .contact-form {
                 width: 90%;
             }
