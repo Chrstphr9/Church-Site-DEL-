@@ -11,6 +11,56 @@
 
     <title>Document</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .contact-form {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+    .contact-form h2 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .contact-form button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .contact-form button:hover {
+        background: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        .contact-form {
+            width: 90%;
+        }
+    }
+</style>
 <body>
     <div class="container">
         <div class="header">
@@ -36,7 +86,16 @@
                 </ul>
             </nav>
         </div>
-
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </body>
         <div class="contact">
             <h2 class="div-title">CONTACT LINES</h2>
             <p class="phone">07068409747, 08074209141, 07031808857, 07063849350, 08039739012, 07075740101</p>
